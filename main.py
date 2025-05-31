@@ -3,9 +3,8 @@ import asyncio
 from telegram import Update, Poll
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, CommandHandler, filters
 from keep_alive import keep_alive
-
-# ضع توكن البوت هنا
-BOT_TOKEN = "7837186188:AAH6kanY3TElNPT91wa-SmWhdN2VTqBnhmg"
+import os
+BOT_TOKEN = os.getenv("7837186188:AAH6kanY3TElNPT91wa-SmWhdN2VTqBnhmg")
 
 def parse_multiple_questions(text):
     question_blocks = re.split(r'\n(?=\d+\.\s)', text.strip())
